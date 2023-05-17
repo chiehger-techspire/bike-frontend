@@ -15,31 +15,31 @@ function App() {
   return (
     <Router>
       <div>
-        <div style={{ height: '50px', background: '#0F375A', display: 'flex' }}>
+        <div style={{ height: '58px', background: '#0F375A', display: 'flex' }}>
           <span style={{ color: '#FFFFFF', marginLeft: '30px', fontSize: '2rem' }}>
-            <img src={logo} width="40"/>  
-            Rent-A-Bike
+            <img src={logo} width="40" />
+            <span style={{ marginLeft: '10px' }}>Rent-A-Bike</span>
           </span>
           <nav>
             <ul style={{ listStyleType: 'none', marginTop: '10px' }}>
               <li style={{ display: 'inline' }}>
-                <Link to="/" style={{ textDecoration: 'none', color: '#FFFFFF', marginRight: '10px' }}>Home</Link>
+                <Link to="/" style={{ textDecoration: 'none', color: '#FFFFFF', marginRight: '20px' }}>Home</Link>
               </li>
               <li style={{ display: 'inline' }}>
-                <Link to="/profile" style={{ textDecoration: 'none', color: '#FFFFFF', marginRight: '10px' }}>Profile</Link>
+                <Link to="/profile" style={{ textDecoration: 'none', color: '#FFFFFF', marginRight: '20px' }}>Profile</Link>
               </li>
               <li style={{ display: 'inline' }}>
-                <Link to="/contact" style={{ textDecoration: 'none', color: '#FFFFFF', marginRight: '10px' }}>Contact</Link>
+                <Link to="/contact" style={{ textDecoration: 'none', color: '#FFFFFF', marginRight: '20px' }}>Contact</Link>
               </li>
             </ul>
           </nav>
         </div>
         <Routes>
-            <Route path="/" element={<CitySelectionPage />}></Route>
-            <Route path="/profile" element={<UserManagement />}></Route>
-            <Route path="/product-desc" element={<ProductPage product={dummyProduct}/>}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-          </Routes>
+          <Route path="/" element={<CitySelectionPage />}></Route>
+          <Route path="/profile" element={<UserManagement />}></Route>
+          <Route path="/product-desc" element={<ProductPage product={dummyProduct} />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
       </div>
     </Router>
   );
