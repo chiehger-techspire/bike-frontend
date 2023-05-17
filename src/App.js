@@ -1,19 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-import BikeRental from './components/bike-rental';
-import BicycleGrid from './components/bike-grid';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import UserManagement from './components/user-management';
+import CitySelectionPage from "./components/landing-page";
+import Contact from './components/contact';
 
 function App() {
   return (
-    <div>
-      <div style={{ height: '50px', background: '#0F375A' }}>
-        <span style={{ color: '#FFFFFF', marginLeft: '30px', fontSize: '2rem' }}>Rent-A-Bike</span>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<CitySelectionPage />}></Route>
+          <Route path="/profile" element={<UserManagement />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
       </div>
-      <div className='App'>
-        {/* <BikeRental /> */}
-        <BicycleGrid />
-      </div>
-    </div>
+    </Router>
   );
 }
 
