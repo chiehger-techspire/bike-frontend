@@ -10,8 +10,8 @@ const CitySelectionPage = () => {
   };
 
   return (
-    <>
-      <h1>City Selection</h1>
+    <div className="page-view">
+      <h2>City Selection</h2>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <select value={selectedCity} onChange={handleCityChange}>
           <option value="">Select a city</option>
@@ -21,7 +21,7 @@ const CitySelectionPage = () => {
         </select>
       </div>
       {selectedCity && <BicycleGrid />}
-    </>
+    </div>
   );
 };
 

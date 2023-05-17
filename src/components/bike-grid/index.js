@@ -16,7 +16,7 @@ const BicycleGrid = () => {
     };
 
     return (
-        <div className="bicycle-grid">
+        <div className="page-view">
             {bicycles.map((bicycle) => (
                 <div
                     key={bicycle.id}
