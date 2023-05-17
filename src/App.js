@@ -1,26 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-import { BikeRental } from './components/bike-rental';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import UserManagement from './components/user-management';
+import CitySelectionPage from "./components/landing-page";
+import Contact from './components/contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <BikeRental />
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<CitySelectionPage />}></Route>
+          <Route path="/profile" element={<UserManagement />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
