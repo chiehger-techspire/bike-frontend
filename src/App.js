@@ -1,25 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import { BikeRental } from './components/bike-rental';
+import BikeRental from './components/bike-rental';
+import BicycleGrid from './components/bike-grid';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <BikeRental />
+    <div>
+      <div style={{ height: '50px', background: '#0F375A' }}>
+        <span style={{ color: '#FFFFFF', marginLeft: '30px', fontSize: '2rem' }}>Rent-A-Bike</span>
+      </div>
+      <div className='App'>
+        {/* <BikeRental /> */}
+        <BicycleGrid />
+      </div>
     </div>
   );
 }
