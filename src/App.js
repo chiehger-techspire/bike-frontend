@@ -12,11 +12,11 @@ function App() {
   }
   return (
     <Router>
-      <div className="bg-black">
+      <div>
         <div style={{ height: '50px', background: '#0F375A', display: 'flex' }}>
           <span style={{ color: '#FFFFFF', marginLeft: '30px', fontSize: '2rem' }}>Rent-A-Bike</span>
           <nav>
-            <ul style={{ listStyleType: 'none' }}>
+            <ul style={{ listStyleType: 'none', marginTop: '10px' }}>
               <li style={{ display: 'inline' }}>
                 <Link to="/" style={{ textDecoration: 'none', color: '#FFFFFF', marginRight: '10px' }}>Home</Link>
               </li>

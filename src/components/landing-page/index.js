@@ -10,10 +10,10 @@ const CitySelectionPage = () => {
   };
 
   return (
-    <>
-      <h1>City Selection</h1>
+    <div className="container" style={{ marginTop: '20px' }}>
+      <h2>City Selection</h2>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <select value={selectedCity} onChange={handleCityChange}>
+        <select className="form-control col-lg-3" value={selectedCity} onChange={handleCityChange}>
           <option value="">Select a city</option>
           {cityList.map((city) => (
             <option value={city}>{city}</option>
@@ -21,7 +21,7 @@ const CitySelectionPage = () => {
         </select>
       </div>
       {selectedCity && <BicycleGrid />}
-    </>
+    </div>
   );
 };
 
