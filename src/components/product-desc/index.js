@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductPage = ({ product }) => {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="page-view">
       <div>
         <img
           src="/path/to/image.jpg"

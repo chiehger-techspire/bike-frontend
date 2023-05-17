@@ -1,4 +1,6 @@
 import "./App.css";
+import logo from './logo.png';
+
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import UserManagement from './components/user-management';
 import CitySelectionPage from "./components/landing-page";
@@ -14,7 +16,10 @@ function App() {
     <Router>
       <div>
         <div style={{ height: '50px', background: '#0F375A', display: 'flex' }}>
-          <span style={{ color: '#FFFFFF', marginLeft: '30px', fontSize: '2rem' }}>Rent-A-Bike</span>
+          <span style={{ color: '#FFFFFF', marginLeft: '30px', fontSize: '2rem' }}>
+            <img src={logo} width="40"/>  
+            Rent-A-Bike
+          </span>
           <nav>
             <ul style={{ listStyleType: 'none', marginTop: '10px' }}>
               <li style={{ display: 'inline' }}>
