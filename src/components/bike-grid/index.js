@@ -21,7 +21,7 @@ const BicycleGrid = () => {
                 <div
                     key={bicycle.id}
                     className="bicycle-item"
-                    style={{ margin: '10px 0', display: 'flex', alignItems: 'center' }}
+                    style={{ margin: '10px 0', display: 'flex', alignItems: 'center', cursor: 'pointer' }}
                     onClick={() => handleClick(bicycle.id)}
                 >
                     <img src={bicycle.image} style={{ width: '10vw' }} alt={`Bicycle ${bicycle.id}`} />
