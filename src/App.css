@@ -88,8 +88,8 @@ th {
   background: #c7c7c7;
 }
 th, td {
-  border: 1px solid #323232;
+  border: 1px solid #323232 !important;
   color: #464646;
-  text-align: center;
+  text-align: center !important;
   padding: 10px;
 }
